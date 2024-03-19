@@ -15,9 +15,52 @@
     <title>Frontend Mentor | Blog preview card</title>
   </head>
   <body>
-    Learning Published 21 Dec 2023 HTML & CSS foundations These languages are
-    the backbone of every website, defining structure, content, and
-    presentation. Greg Hooper
+    <div
+      class="container m-auto h-screen w-screen flex justify-center items-center"
+    >
+      <!-- Card -->
+      <main
+        class="bg-custom-white border border-custom-black rounded-3xl p-6 card-with-shadow w-10/12"
+      >
+        <!-- Image -->
+        <figure class="rounded-xl overflow-hidden mb-6">
+          <img
+            src="./assets/images/illustration-article.svg"
+            alt=""
+            class="w-full h-48 object-cover"
+          />
+        </figure>
+        <!-- Description -->
+        <section class="flex flex-col gap-5">
+          <!-- badge -->
+          <p
+            class="bg-custom-yellow font-semibold text-xs p-1 px-3 rounded-sm w-fit"
+          >
+            Learning
+          </p>
+          <!-- Datetime -->
+          <p class="text-xs font-custom-500">Published 21 Dec 2023</p>
+          <!-- Title -->
+          <h1 class="font-custom-800 text-xl">HTML & CSS foundations</h1>
+          <!-- Paragraph -->
+          <p class="text-custom-grey text-sm">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+          <!-- Avatar + User Name -->
+          <div class="flex gap-4">
+            <figure class="rounded-full">
+              <img
+                src="./assets/images/image-avatar.webp"
+                alt=""
+                class="w-8 h-8"
+              />
+            </figure>
+            <span class="font-custom-800 text-sm my-auto">Greg Hooper</span>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <!-- <div class="attribution">
       Challenge by

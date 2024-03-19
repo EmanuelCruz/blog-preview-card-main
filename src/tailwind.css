@@ -18,6 +18,23 @@
   html {
     @apply text-paragraph;
     @apply font-main;
-    @apply bg-slate-500;
+    @apply bg-custom-yellow;
+  }
+}
+
+@layer components {
+  .card-with-shadow {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 100%;
+      height: 100%;
+      top: 10px;
+      left: 10px;
+      border-radius: 1.5rem;
+      z-index: -10;
+    }
   }
 }
