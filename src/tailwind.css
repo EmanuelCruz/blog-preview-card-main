@@ -25,16 +25,33 @@
 @layer components {
   .card-with-shadow {
     position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: black;
-      width: 100%;
-      height: 100%;
-      top: 10px;
-      left: 10px;
-      border-radius: 1.5rem;
-      z-index: -10;
-    }
+    top: 0px;
+    left: 0px;
+    transition:
+      top 0.2s ease-in-out,
+      left 0.2s ease-in-out;
+  }
+
+  .card-with-shadow::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 8px;
+    left: 8px;
+    border-radius: 1.5rem;
+    z-index: -10;
+    transition:
+      top 0.2s ease-in-out,
+      left 0.2s ease-in-out;
+  }
+  .card-with-shadow:hover {
+    top: -3px;
+    left: -3px;
+  }
+  .card-with-shadow:hover::before {
+    top: 11px;
+    left: 11px;
   }
 }
